@@ -12,6 +12,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     window.addEventListener("scroll", checkScroll);
+ 
+  });
+  document.addEventListener("scroll", function () {
+    let images = document.querySelectorAll(".image");
+    images.forEach((img) => {
+      let rect = img.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        img.classList.add("visible");
+      }
+    });
   });
 
     

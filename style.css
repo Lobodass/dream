@@ -12,9 +12,9 @@ body {
     width: 100%;
 }
 img {
+    align-items: center;
     width: 100%;
     height: auto;
-    align-items: center;
 }
 .text-overlay {
     position: absolute;
@@ -40,6 +40,7 @@ img {
     color: rgb(96, 92, 92);
     transform: translateY(50px);
     transition: opacity 1s ease-out, transform 1s ease-out;
+    padding-top: 400px;
     
    
     
@@ -60,36 +61,63 @@ img {
     z-index: 1000;
     transition: width 0.2s ease-out;
   }
-  .carousel {
-    overflow: hidden;
-    white-space: nowrap;
+  
+ 
+.carousel{
     position: relative;
     width: 100%;
-    padding: 150px 0;
-  }
+    padding-top: 200px;
+    
+}
 
-  .carousel-track {
-    display: flex;
-    animation: scroll 10s linear infinite;
-  }
-
-  .carousel img {
-    width: 350px;
-    height: 250px;
-    border-radius: 0px;
-  }
-  .text-overlax {
+.text-overlax {
     position: absolute;
-    top: 50%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgb(255, 255, 255);
-    font-size: 60px;
+    font-size: 100px;
     font-weight: bold;
+    background-color: rgba(16, 16, 16, 0.442);
     text-align: center;
     padding: 15px 30px;
     border-radius: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: rgba(14, 14, 14, 0.529);
+   
     
 }
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding-top: 200px;
+  }
+
+  .image-row {
+    display: flex;
+    gap: 100px; /* Відстань між фото */
+  }
+
+  .image {
+    width: 500px;
+    height: auto;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .textl {
+    font-size: 24px;
+    font-weight: bold;
+    color: #707070;
+    text-align: center;
+    margin: 50px 0;
+  }
+
+  /* Анімація появи */
+  .image.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
