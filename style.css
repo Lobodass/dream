@@ -131,3 +131,48 @@ img {
     opacity: 1;
     transform: translateY(0);
 }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+/* Контейнер для фото */
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Ряд фото */
+.photo-row {
+  display: flex;
+  gap: 20px; /* Відстань між фото */
+}
+
+/* Блок для кожного фото */
+.photo-box {
+  width: 400px; /* Розмір фото */
+  height: auto;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Робимо фото 100% розміром блоку */
+.photo-box img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Анімація появи */
+.fade-effect.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
