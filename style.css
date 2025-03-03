@@ -140,12 +140,8 @@ body {
 }
 
 /* Контейнер для фото */
-.content-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+
+
 
 /* Ряд фото */
 .photo-row {
@@ -174,5 +170,11 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+.text6{
+  color: #707070;
 
-
+}
+.fff{
+  padding-top: 100px;
+  padding-left: 20px;
+}
